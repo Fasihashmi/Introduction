@@ -1,7 +1,7 @@
 <h1 align="center">Hi there, I'm Fasih Hashmi 👋</h1>
 
 <p align="center">
-  <em>Passionate developer · Problem solver · Lifelong learner</em>
+  <em>BS Computer Science Student · Aspiring Developer · Problem Solver</em>
 </p>
 
 <p align="center">
@@ -14,33 +14,38 @@
 
 ## 🙋‍♂️ About Me
 
-- 🔭 I'm currently working on exciting software projects
-- 🌱 Always learning and exploring new technologies
-- 👯 Open to collaborating on interesting open-source projects
-- 💬 Ask me about anything tech-related — happy to help!
+- 🎓 Currently in **4th Semester of BS Computer Science**
+- 💻 Learning **C, C++, Python & Assembly Language**
+- 🔨 Building terminal-based projects to strengthen my programming fundamentals
+- 🌱 Growing every day — one bug fix at a time!
+- 👯 Open to collaborating on beginner-friendly open-source projects
+- 💬 Ask me about C, C++, or Python — happy to discuss!
 - 📫 Reach me at: **[your-email@example.com](mailto:your-email@example.com)**
-- ⚡ Fun fact: I love turning ideas into reality through code
+- ⚡ Fun fact: My first login system was built entirely in the terminal!
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Languages I'm Learning
 
-### Languages
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-### Frameworks & Libraries
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=for-the-badge&logo=assemblyscript&logoColor=white)
 
 ### Tools & Platforms
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+## 🚀 My Projects
+
+| Project | Description | Language |
+|---|---|---|
+| 🎮 **Tic Tac Toe** | Classic two-player Tic Tac Toe game that runs in the terminal | C++ |
+| 🏦 **Bank Management System** | Terminal-based banking app with a user login/authentication system | C++ |
+| 🔢 **Number Guesser Game** | A fun number guessing game with hints played in the terminal | Python |
 
 ---
 
