@@ -20,7 +20,7 @@
 - 🌱 Growing every day — one bug fix at a time!
 - 👯 Open to collaborating on beginner-friendly open-source projects
 - 💬 Ask me about C, C++, or Python — happy to discuss!
-- 📫 Reach me at: **[your-email@example.com](mailto:your-email@example.com)**
+- 📫 Reach me at: **[fasihashmi480@gmail.com](mailto:fasihashmi480@gmail.com)**
 - ⚡ Fun fact: My first login system was built entirely in the terminal!
 
 ---
@@ -71,7 +71,7 @@
   <a href="https://twitter.com/fasihashmi" target="_blank">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>
-  <a href="mailto:your-email@example.com">
+  <a href="mailto:fasihashmi480@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
