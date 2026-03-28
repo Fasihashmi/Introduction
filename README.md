@@ -65,7 +65,7 @@
 ## 🤝 Connect With Me
 
 <p align="left">
-  <a href="https://linkedin.com/in/fasihashmi" target="_blank">
+  <a href="https://www.linkedin.com/in/faisal-hashmi-9a9a21347/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="https://twitter.com/fasihashmi" target="_blank">
