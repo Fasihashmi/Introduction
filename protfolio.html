@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faisal — BSCS Student Portfolio</title>
+  <meta name="description" content="Faisal - BSCS 4th semester student portfolio (University of Gujrat)" />
+  <style>
+    :root{
+      --bg:#070a12;
+      --panel: rgba(16,26,51,.70);
+      --text:#e8eefc;
+      --muted:#b7c3e6;
+      --brand:#7c5cff;
+      --brand2:#20c997;
+      --brand3:#ffb703;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1050px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    /* UPDATED: more eye-catching animated gradient background */
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      line-height:1.6;
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(800px 520px at 90% 18%, rgba(32,201,151,.22), transparent 55%),
+        radial-gradient(700px 520px at 40% 95%, rgba(255,183,3,.16), transparent 60%),
+        linear-gradient(180deg, #070a12 0%, #0b1220 45%, #070a12 100%);
+      background-attachment: fixed;
+    }
+    body::before{
+      content:"";
+      position: fixed;
+      inset:-30%;
+      z-index:-1;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(124,92,255,.18), transparent 40%),
+        radial-gradient(circle at 70% 40%, rgba(32,201,151,.12), transparent 42%),
+        radial-gradient(circle at 55% 75%, rgba(255,183,3,.10), transparent 45%);
+      filter: blur(22px);
+      transform: translate3d(0,0,0);
+      animation: floatGlow 14s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+    @keyframes floatGlow{
+      0%   { transform: translate(-2%, -1%) scale(1); }
+      50%  { transform: translate(2%,  1%) scale(1.03); }
+      100% { transform: translate(1%, -2%) scale(1.02); }
+    }
+
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.65);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.3px;}
+    .logo{width:34px; height:34px; border-radius:10px; background: linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow: var(--shadow);}
+    .nav-links{display:flex; gap:16px; align-items:center; flex-wrap:wrap}
+    .nav-links a{padding:8px 10px; border-radius:10px; color:var(--muted);}
+    .nav-links a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      padding:10px 14px; border-radius:12px;
+    }
+    .btn:hover{background: rgba(255,255,255,.10)}
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#071018;
+      font-weight:700;
+    }
+    header.hero{padding:70px 0 30px;}
+    .hero-grid{display:grid; grid-template-columns: 1.35fr .65fr; gap:28px; align-items:stretch;}
+
+    /* UPDATED: slightly more glassy cards for the new background */
+    .card{
+      background: rgba(16,26,51,.62);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-main{padding:26px}
+    .kicker{color:var(--muted); margin:0 0 10px}
+    h1{margin:0 0 12px; font-size: clamp(30px, 4vw, 44px); line-height:1.15;}
+    .subtitle{color:var(--muted); margin:0 0 18px; max-width:72ch}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0}
+    .pill{font-size:13px; padding:7px 10px; border-radius:999px; border:1px solid var(--border); background: rgba(255,255,255,.04); color: var(--muted);}
+    .hero-side{padding:22px; display:flex; flex-direction:column; gap:14px;}
+
+    .avatar{
+      width:110px; height:110px; border-radius: 26px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      background: rgba(255,255,255,.04);
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+
+    section{padding:26px 0}
+    .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:14px;}
+    .section-head h2{margin:0; font-size:22px}
+    .section-head p{margin:0; color:var(--muted)}
+    .grid{display:grid; gap:14px; grid-template-columns: repeat(12, 1fr);}
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-8{grid-column: span 8}
+    .col-12{grid-column: span 12}
+    .item{padding:16px}
+    .item h3{margin:0 0 8px; font-size:18px}
+    .item p{margin:0; color:var(--muted)}
+    .meta{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+    .tag{font-size:12px; color:var(--muted); border:1px solid var(--border); padding:4px 8px; border-radius:999px; background: rgba(255,255,255,.03);}
+    .project-actions{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap}
+    input, textarea{
+      width:100%;
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      border-radius: 12px;
+      padding:10px 12px;
+      color:var(--text);
+      font: inherit;
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    footer{padding:26px 0 40px; color:var(--muted); border-top:1px solid var(--border); margin-top:22px;}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .col-6,.col-4,.col-8{grid-column: span 12}
+      .nav-links{gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Faisal</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="container hero-grid">
+      <div class="card hero-main">
+        <p class="kicker">Hi, I’m <strong>Faisal</strong></p>
+        <h1>BSCS Student (4th Semester) — C++ & Assembly Learner</h1>
+        <p class="subtitle">
+          I’m a Computer Science student at <strong>University of Gujrat</strong>, currently in my 4th semester.
+          I have intermediate skills in <strong>C++</strong> and <strong>Assembly Language</strong>, and I enjoy building
+          console-based projects while improving my problem-solving skills.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+          <a class="btn" href="https://github.com/Fasihashmi" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <div class="pill-row" aria-label="Highlights">
+          <span class="pill">📍 Islamabad</span>
+          <span class="pill">🎓 BSCS (4th Sem)</span>
+          <span class="pill">💻 C++ • Assembly</span>
+          <span class="pill">🎯 Graduation: 2028</span>
+        </div>
+      </div>
+
+      <aside class="card hero-side">
+
+          <h3 style="margin:10px 0 0; font-size:16px">Quick Info</h3>
+          <p style="margin:6px 0 0; color:var(--muted); font-size:14px">
+            Email: <a href="mailto:fasihashmi480@gmail.com">fasihashmi480@gmail.com</a>
+          </p>
+          <p style="margin:6px 0 0; color:var(--muted); font-size:14px">
+            Location: Islamabad
+          </p>
+          <p style="margin:6px 0 0; color:var(--muted); font-size:14px">
+            GitHub: <a href="https://github.com/Fasihashmi" target="_blank" rel="noreferrer">@Fasihashmi</a>
+          </p>
+      </aside>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>About</h2>
+          <p>Quick intro about me.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card item col-8">
+          <h3>Who I am</h3>
+          <p>
+            I’m Faisal, a BSCS student (4th semester) studying at University of Gujrat. I’m currently focusing on strengthening
+            my programming fundamentals, especially in C++, and learning low-level concepts through Assembly language.
+          </p>
+        </div>
+
+        <div class="card item col-4">
+          <h3>Focus</h3>
+          <p>• OOP & Programming Fundamentals</p>
+          <p>• Problem Solving</p>
+          <p>• C++ Console Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Projects</h2>
+          <p>Some C++ projects I’ve built (links can be added later).</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <article class="card item col-6">
+          <h3>Bank Management System (C++)</h3>
+          <p>A console-based bank system to manage accounts, deposits/withdrawals, and basic customer records.</p>
+          <div class="meta">
+            <span class="tag">C++</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Console App</span>
+          </div>
+        </article>
+
+        <article class="card item col-6">
+          <h3>Tic Tac Toe Game (C++)</h3>
+          <p>A simple Tic Tac Toe game with a console UI and game logic for two players.</p>
+          <div class="meta">
+            <span class="tag">C++</span>
+            <span class="tag">Game Logic</span>
+            <span class="tag">Arrays</span>
+          </div>
+        </article>
+
+        <article class="card item col-6">
+          <h3>Number Guesser (C++)</h3>
+          <p>A number guessing game where the user guesses a random number with hints (too high/too low).</p>
+          <div class="meta">
+            <span class="tag">C++</span>
+            <span class="tag">Random</span>
+            <span class="tag">Console</span>
+          </div>
+        </article>
+
+        <article class="card item col-6">
+          <h3>Assembly (Practice)</h3>
+          <p>Basic Assembly programs to understand registers, loops, procedures, and low-level logic.</p>
+          <div class="meta">
+            <span class="tag">Assembly</span>
+            <span class="tag">Low-level</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Skills</h2>
+          <p>My current technical skills.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card item col-4">
+          <h3>Languages</h3>
+          <p>C++ (Intermediate), Assembly (Intermediate)</p>
+        </div>
+        <div class="card item col-4">
+          <h3>Concepts</h3>
+          <p>OOP, Basic DSA, Problem Solving</p>
+        </div>
+        <div class="card item col-4">
+          <h3>Tools</h3>
+          <p>Git/GitHub (basic), VS Code</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Education</h2>
+          <p>My academic background.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card item col-12">
+          <h3>BS Computer Science (BSCS)</h3>
+          <p><strong>University:</strong> University of Gujrat</p>
+          <p><strong>Current Semester:</strong> 4th</p>
+          <p><strong>City:</strong> Islamabad</p>
+          <p><strong>Expected Graduation:</strong> 2028</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p>Feel free to reach out.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card item col-6">
+          <h3>Email</h3>
+          <p style="color:var(--muted); margin:0 0 12px">
+            Email me at:
+            <a class="btn" href="mailto:fasihashmi480@gmail.com">fasihashmi480@gmail.com</a>
+          </p>
+
+          <form action="mailto:fasihashmi480@gmail.com" method="post" enctype="text/plain">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" type="email" placeholder="Your email" required />
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="card item col-6">
+          <h3>GitHub</h3>
+          <div class="project-actions" style="margin-top:10px">
+            <a class="btn" href="https://github.com/Fasihashmi" target="_blank" rel="noreferrer">github.com/Fasihashmi</a>
+          </div>
+          <p style="margin-top:12px; color:var(--muted)">
+            When you upload repos, I can add direct project links here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
+        <span>© <span id="year"></span> Faisal. All rights reserved.</span>
+        <a href="#top" class="btn">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
