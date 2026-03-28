@@ -45,7 +45,7 @@
 |---|---|---|
 | 🎮 **Tic Tac Toe** | Classic two-player Tic Tac Toe game that runs in the terminal | C++ |
 | 🏦 **Bank Management System** | Terminal-based banking app with a user login/authentication system | C++ |
-| 🔢 **Number Guesser Game** | A fun number guessing game with hints played in the terminal | Python |
+| 🔢 **Number Guesser Game** | A fun number guessing game with hints played in the terminal | C++ |
 
 ---
 
